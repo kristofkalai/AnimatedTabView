@@ -48,7 +48,7 @@ extension TabBarButton {
     }
 
     private func label() -> some View {
-        Image(systemName: "\(tab)\(selectedTab == tab ? ".fill" : .init())")
+        Image(systemName: "\(tab.rawValue)\(selectedTab == tab ? ".fill" : .init())")
             .transition(.identity)
             .font(.title.bold())
             .foregroundColor(foregroundColor(selectedTab))
