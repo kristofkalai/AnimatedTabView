@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "animatedtabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stateman92/AnimatedTabView",
+      "state" : {
+        "revision" : "75d13d3bcfbfd9c0843332ead3bfcbe15930e698",
+        "version" : "0.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
