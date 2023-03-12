@@ -1,9 +1,17 @@
 # AnimatedTabView
 A TabView that can be animated in a versatile way! 🪛
 
-### How to use
+## Setup
 
-First you should create your tabs:
+Add the following to `Package.swift`:
+
+```swift
+.package(url: "https://github.com/stateman92/AnimatedTabView", exact: .init(0, 0, 3))
+```
+
+[Or add the package in Xcode.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+
+## Usage
 
 ```swift
 extension Tab {
@@ -20,16 +28,9 @@ extension Tab {
         .init(rawValue: "person")
     }
 }
-```
-
-Then create a @State variable and the View itself:
-
-
-```swift
+// ...
 @State private var selectedTab: Tab = .house
-
-...
-                
+// ...
 AnimatedTabView(
     selectedTab: $selectedTab,
     tabs: [.house, .bookmark, .message, .person],
@@ -40,6 +41,6 @@ AnimatedTabView(
 
 For details see the Example app.
 
-### Example
+## Example
 
 <p style="text-align:center;"><img src="https://github.com/stateman92/AnimatedTabView/blob/main/Resources/screenrecording.gif?raw=true" width="50%" alt="Example"></p>
