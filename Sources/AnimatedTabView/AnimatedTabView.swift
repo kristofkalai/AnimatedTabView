@@ -13,7 +13,7 @@ public struct AnimatedTabView {
     private let padding: EdgeInsets
     private let backgroundColor: (Tab) -> Color
     private let foregroundColor: (Tab) -> Color
-    
+
     public init(selectedTab: Binding<Tab>,
                 tabs: [Tab],
                 padding: EdgeInsets = .init(top: 4, leading: 8, bottom: 4, trailing: 8),
@@ -50,11 +50,11 @@ extension AnimatedTabView {
             }
         }
     }
-    
+
     private func curvePoint(width: CGFloat) -> CGFloat {
         curvePoint(forIndex: tabs.firstIndex(of: selectedTab) ?? .zero, width: width)
     }
-    
+
     private func curvePoint(forIndex index: Int, width: CGFloat) -> CGFloat {
         let width = width - padding.trailing - padding.leading
         let pieces = CGFloat(tabs.count) * 2
@@ -64,7 +64,7 @@ extension AnimatedTabView {
 
 struct AnimatedTabView_Previews: PreviewProvider {
     @State private static var selectedTab: Tab = .init(rawValue: "house")
-    
+
     static var previews: some View {
         AnimatedTabView(selectedTab: $selectedTab,
                         tabs: [.init(rawValue: "house"), .init(rawValue: "message")],
